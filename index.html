@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- http://getbootstrap.com/docs/5.1/ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    ></script>
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Computer Components</title>
+    <!-- add css file -->
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="page_container">
+      <div class="wrapper">
+        <header id="header">
+          <nav class="navbar navbar-expand-lg bg-light py-3">
+            <div class="container-fluid px-4">
+              <a class="navbar-brand h2" href="#">Computer Webshop</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Products</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                </ul>
+                <form class="d-flex me-4" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-secondary" type="submit">
+                    Search
+                  </button>
+                </form>
+                <div class="">
+                  <a href="#" class="icon"
+                    ><i class="bx bx-user bx-tada-hover"></i
+                  ></a>
+                  <a href="#" class="icon"
+                    ><i class="bx bx-shopping-bag bx-tada-hover"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <section class="collection">
+          <div class="filters">
+            <div data-filter="All">All</div>
+            <div data-filter="Motherboard">Motherboard</div>
+            <div data-filter="CPU">CPU</div>
+            <div data-filter="Memory">Memory</div>
+            <div data-filter="Hard Drives">Hard Drives</div>
+          </div>
+          <div class="container-fluid" id="products"></div>
+          <div class="button d-flex">
+            <a class="btn loadmore">Load More</a>
+          </div>
+          <div class="result" id="total_cost" style="margin-left: 40px">
+            USD 0.00
+          </div>
+          <button id="submit" class="btn btn-primary" type="submit">
+            Submit Order
+          </button>
+        </section>
+      </div>
+      <footer class="small text-center text-muted px-2 footer">
+        <p class="copyright">Copyright &#169; 2022 Oksana Pashkovska</p>
+        <div class="social-links">
+          <a href="#" class="icon"
+            ><i class="bx bxl-linkedin bx-burst-hover"></i
+          ></a>
+          <a href="#" class="icon"
+            ><i class="bx bxl-facebook-square bx-burst-hover"></i
+          ></a>
+          <a href="#" class="icon"
+            ><i class="bx bxl-twitter bx-burst-hover"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
+    <!--add javascript file-->
+    <script src="script.js"></script>
+  </body>
+</html>
