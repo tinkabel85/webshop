@@ -11,105 +11,105 @@
       "id": 2,
       "title": "Gigabyte B450 AORUS M AM4 Micro ATX Motherboard",
       "price": "80",
-      "url": "./images/product-2.png",
+      "url": "./images/item.jpg",
       "category": "Motherboard"
     },
     {
       "id": 3,
       "title": "MSI MPG Z490 GAMING EDGE WIFI LGA 1200 ATX Motherboard",
       "price": "90",
-      "url": "./images/product-3.png",
+      "url": "./images/item.jpg",
       "category": "Motherboard"
     },
     {
       "id": 4,
       "title": "Intel Core i5-10400 2.9 GHz Six-Core LGA 1200 Processor",
       "price": "129",
-      "url": "./images/product-4.png",
+      "url": "./images/item.jpg",
       "category": "CPU"
     },
     {
       "id": 5,
       "title": "Intel Core i9-12900K 3.2 GHz 16-Core LGA 1700 Processor",
       "price": "580",
-      "url": "./images/product-5.png",
+      "url": "./images/item.jpg",
       "category": "CPU"
     },
     {
       "id": 6,
       "title": "Intel Core i5-12600K 3.7 GHz 10-Core LGA 1700 Processor",
       "price": "277",
-      "url": "./images/product-6.png",
+      "url": "./images/item.jpg",
       "category": "CPU"
     },
     {
       "id": 7,
       "title": "XPG 32GB Lancer RGB DDR5 6000 MHz UDIMM Memory Kit (2 x 16GB, Black)",
       "price": "219",
-      "url": "./images/product-7.png",
+      "url": "./images/item.jpg",
       "category": "Memory"
     },
     {
       "id": 8,
       "title": "Intel Core i9-11900K 3.5 GHz Eight-Core LGA 1200 Processor",
       "price": "280",
-      "url": "./images/product-8.png",
+      "url": "./images/item.jpg",
       "category": "CPU"
     },
     {
       "id": 9,
       "title": "Crucial 16GB Laptop DDR4 3200 MHz SODIMM Memory Module (1 x 16GB)",
       "price": "70",
-      "url": "./images/product-9.png",
+      "url": "./images/item.jpg",
       "category": "Memory"
     },
     {
       "id": 10,
       "title": "Synology 4GB DDR4 2666 MHz Non-ECC SO-DIMM Memory Module",
       "price": "89",
-      "url": "./images/product-10.png",
+      "url": "./images/item.jpg",
       "category": "Memory"
     },
     {
       "id": 11,
       "title": "Crucial 64GB DDR4 3200 MHz SO-DIMM Memory Kit (2 x 32GB)",
       "price": "215",
-      "url": "./images/product-11.png",
+      "url": "./images/item.jpg",
       "category": "Memory"
     },
     {
       "id": 12,
       "title": "SeaSonic Electronics FOCUS 750W 80 PLUS Gold ATX 12V Power Supply",
       "price": "139",
-      "url": "./images/product-12.png",
+      "url": "./images/item.jpg",
       "category": "Power Supply"
     },
     {
       "id": 13,
       "title": "NZXT C750 750W 80 PLUS Gold Modular Power Supply",
       "price": "100",
-      "url": "./images/product-13.png",
+      "url": "./images/item.jpg",
       "category": "Power Supply"
     },
     {
       "id": 14,
       "title": "Seagate 20TB IronWolf Pro 7200 rpm SATA III Internal NAS HDD (CMR)",
       "price": "350",
-      "url": "./images/product-14.png",
+      "url": "./images/item.jpg",
       "category": "Hard Drives"
     },
     {
       "id": 15,
       "title": "RWD 2TB WD_BLACK SN850 Gaming Internal NVMe PCIe 4.0 SSD with Heatsink",
       "price": "250",
-      "url": "./images/product-15.png",
+      "url": "./images/item.jpg",
       "category": "Hard Drives"
     },
     {
       "id": 16,
       "title": "Samsung 1TB 970 EVO Plus NVMe M.2 Internal SSD",
       "price": "90",
-      "url": "./images/product-16.png",
+      "url": "./images/item.jpg",
       "category": "Hard Drives"
     }
   ]

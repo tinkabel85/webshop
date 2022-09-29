@@ -175,8 +175,11 @@ body {
 .item .bottom .price {
   font-size: 1.4rem;
 }
+.item .bottom .quantity {
+  width: 3rem;
+}
 .item:hover {
-  transform: scale(1.08);
+  /* transform: scale(1.08); */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .item:hover .top .icon {
@@ -185,12 +188,45 @@ body {
 }
 .collection .button {
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .collection .button .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  background: linear-gradient(to bottom, #fccb90, #ff9a9e);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+#summary {
+  margin-top: 0.5em;
+  border-top: 1px solid #ddd;
+  padding-top: 1.5em;
+  margin-bottom: 2rem;
+}
+.summary-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.group {
+  width: 30rem;
+}
+.group-label {
+  font-size: 1.2rem;
+}
+textarea {
+  overflow: auto;
+  padding-left: 0.875em;
+  vertical-align: top;
+  width: 80%;
+}
+.btn--estimate {
+  padding: 0.3rem 1rem;
   border-radius: 0.5rem;
   color: #fff;
   font-weight: 500;
