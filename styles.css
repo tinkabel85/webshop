@@ -203,18 +203,16 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-#summary {
-  margin-top: 0.5em;
-  border-top: 1px solid #ddd;
-  padding-top: 1.5em;
-  margin-bottom: 2rem;
+.cart {
+  width: 80%;
+  margin: 0 auto;
 }
 .summary-title {
   text-align: center;
   margin-bottom: 1rem;
 }
 .group {
-  width: 30rem;
+  width: 20rem;
 }
 .group-label {
   font-size: 1.2rem;
@@ -225,7 +223,7 @@ textarea {
   vertical-align: top;
   width: 80%;
 }
-.btn--estimate {
+.btn-estimate {
   padding: 0.3rem 1rem;
   border-radius: 0.5rem;
   color: #fff;

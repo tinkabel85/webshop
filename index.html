@@ -106,7 +106,7 @@
           <!---->
           <form>
             <div class="container-fluid" id="products"></div>
-            <div class="container-fluid">
+            <div class="container-fluid cart">
               <h2 class="summary-title">Shopping Card</h2>
               <div class="container-fluid">
                 <div class="group method">
@@ -178,12 +178,10 @@
               <div class="container-fluid">
                 <div class="group calc">
 
-                    <input
-                      type="submit"
-                      value="Estimate Total"
+                    <button
                       id="btn-estimate"
-                      class="btn btn--estimate"
-                    />
+                      class="btn btn-estimate"
+                    >Estimate Total</button>
                 </div>
               </div>
               <div class="container-fluid">
@@ -191,16 +189,16 @@
                   <table>
                       <tr>
                         <td>Total items:</td>
-                        <td><input type="text" id="items-qnt" placeholder="0"></input></td>
+                        <td><input type="text" id="items-qnt" disabled placeholder="0"></input></td>
                       </tr>
                       <tr>
                         <td>Shipping Costs:</td>
-                        <td><input type="text" id="shipping-sum" placeholder="$0.00"></input></td>
+                        <td><input type="text" id="shipping-sum" disabled placeholder="$0.00"></input></td>
                       </tr>
                       <tfoot>
                         <tr>
                           <td>Total sum:</td>
-                          <td><input type="text" id="total-sum" placeholder="$0.00"></input></td>
+                          <td><input type="text" id="total-sum" disabled placeholder="$0.00"></input></td>
                         </tr>
                       </tfoot>
                     </table>
