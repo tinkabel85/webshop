@@ -106,10 +106,7 @@
           <!---->
           <form>
             <div class="container-fluid" id="products"></div>
-            <div class="button d-flex">
-              <a class="btn load-btn">More</a>
-            </div>
-            <div id="summary">
+            <div class="container-fluid cart">
               <h2 class="summary-title">Shopping Card</h2>
               <div class="container-fluid">
                 <div class="group method">
@@ -154,7 +151,7 @@
                     id="special-recipes"
                   />
                   <label for="special-recipes"
-                    >Include recipes in the parcel.
+                    >Include receipt in the parcel
                   </label>
                   <br />
 
@@ -164,10 +161,8 @@
                     name="special-gift"
                     id="special-gift"
                   />
-                  <label for="special-gift">Wrap as a gift. </label>
+                  <label for="special-gift">Wrap as a gift </label>
                 </div>
-              </div>
-              <div class="container-fluid">
                 <div class="group notes">
                   <label for="txt-notes" class="group-label">Other notes:</label
                   ><br />
@@ -175,28 +170,42 @@
                   <textarea
                     name="txt-notes"
                     id="txt-notes"
-                    rows="2"
+                    rows="3
                     placeholder="Any comments we need to know."
                   ></textarea>
                 </div>
-
+              </div>
+              <div class="container-fluid">
                 <div class="group calc">
-                  <p>
-                    <label for="btn-estimate" class="group-label"
-                      >Click to estimate:</label
-                    ><br />
-                    <input
-                      type="submit"
-                      value="Estimate Total"
-                      id="btn-estimate"
-                      class="btn btn--estimate"
-                    />
-                    <input type="text" id="txt-estimate" placeholder="$0.00" />
-                  </p>
 
-                  <div id="results"></div>
+                    <button
+                      id="btn-estimate"
+                      class="btn btn-estimate"
+                    >Estimate Total</button>
                 </div>
               </div>
+              <div class="container-fluid">
+                <div class="group sum">
+                  <table>
+                      <tr>
+                        <td>Total items:</td>
+                        <td><input type="text" id="items-qnt" disabled placeholder="0"></input></td>
+                      </tr>
+                      <tr>
+                        <td>Shipping Costs:</td>
+                        <td><input type="text" id="shipping-sum" disabled placeholder="$0.00"></input></td>
+                      </tr>
+                      <tfoot>
+                        <tr>
+                          <td>Total sum:</td>
+                          <td><input type="text" id="total-sum" disabled placeholder="$0.00"></input></td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
           </form>
         </section>
