@@ -33,18 +33,6 @@ body {
   margin: 0 auto;
   padding-bottom: 2rem;
 }
-/* .main {
-  max-width: 80%;
-  margin: auto;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-.item {
-  display: inline-block;
-  width: 45%;
-  margin: 1em 2.2%;
-  vertical-align: top;
-} */
 
 .icon {
   color: #a9a9a9;
@@ -171,6 +159,7 @@ body {
   border-radius: 1rem;
   padding: 0.8rem 1rem;
   transition: 0.3s;
+  width: 10rem;
 }
 .item .bottom .price {
   font-size: 1.4rem;
@@ -211,8 +200,13 @@ body {
   text-align: center;
   margin-bottom: 1rem;
 }
+.cart-item-btn {
+  background-color: transparent;
+  border: none;
+  line-height: 1;
+}
 .group {
-  width: 20rem;
+  width: 21rem;
 }
 .group-label {
   font-size: 1.2rem;
@@ -237,4 +231,7 @@ textarea {
 .footer {
   display: flex;
   justify-content: space-between;
+}
+.footer .copyright {
+  margin: auto 0;
 }
