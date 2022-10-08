@@ -12,6 +12,7 @@ const getProducts = async () => {
     console.log(err);
   }
 };
+
 // getting access to DOM element with id "products"
 const productsWrapper = document.getElementById("products");
 // getting access to button "Estimate Total"
@@ -47,21 +48,56 @@ button.addEventListener("click", (e) => {
   document.getElementById("shipping-sum").value = "$" + shippingCost;
   document.getElementById("total-sum").value = "$" + totalSum;
 });
-
+// creating an empty array for shopping cart
 let cart = [];
+
+const cartDom = document.querySelector("#cart-content");
 
 function addToCart(id) {
   const productDom = document.querySelector(`[data-id=item-${id}]`);
   const productInCart = {
     name: productDom.querySelector(".item-name").innerText,
     price: parseInt(productDom.querySelector(".price").innerText.substring(1)),
-    quantity: parseInt(productDom.querySelector(".quantity").value),
+    quantity: 1,
   };
-
+  productDom.querySelector(".cart-btn").disabled = true;
+  productDom.querySelector(".cart-btn").innerText = "In Cart";
   let totalItemPrice = productInCart.price * productInCart.quantity;
   productInCart.totalItemPrice = totalItemPrice;
   cart.push(productInCart);
   console.log("Cart", cart);
+
+  cartDom.insertAdjacentHTML(
+    "afterbegin",
+    `
+    <div class="d-flex flex-row justify-content-around w-75 cart-items">
+        <p class="p-2 mb-1 w-50 cart-item-name flex-grow-1 ">${productInCart.name}</p>
+        <p class="p-2 mb-1 w-25 cart-item-price">$ ${productInCart.price}</p>
+    <button class="mb-1 p-2 cart-item-btn" type="button" data-action="remove-item"><i class='bx bx-x bx-sm bx-tada-hover'></i></button>
+    </div>
+  `
+  );
+  const cartItemsDom = cartDom.querySelectorAll(".cart-items");
+  cartItemsDom.forEach((cartItemDom) => {
+    if (
+      cartItemDom.querySelector(".cart-item-name").innerText ===
+      productInCart.name
+    ) {
+      cartItemDom
+        .querySelector('[data-action="remove-item"]')
+        .addEventListener("click", () => {
+          cart.forEach((cartItem) => {
+            cartItemDom.remove();
+            cart = cart.filter(
+              (cartItem) => cartItem.name !== productInCart.name
+            );
+            productDom.querySelector(".cart-btn").disabled = false;
+            productDom.querySelector(".cart-btn").innerText = "Add to Cart";
+            console.log(cart);
+          });
+        });
+    }
+  });
 }
 
 // Display Products
@@ -89,7 +125,6 @@ const displayProductItems = (items) => {
           <h4 class="item-name">${product.title}</h4>
           <div class="d-flex">
             <div class="price">$${product.price}</div>
-              <input class="quantity" type="number" min="0" max="10" id="quantity" size="3" placeholder="0">
             <button onclick="addToCart(${product.id})" class="cart-btn" type="button" data-action="add-to-cart">Add to Cart</button>
           </div>
         </div>
