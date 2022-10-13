@@ -94,7 +94,7 @@
             </div>
           </nav>
         </header>
-        <!---->
+        <!--Main Section-->
         <section class="collection">
           <div class="filters">
             <div data-filter="All">All</div>
@@ -103,114 +103,121 @@
             <div data-filter="Memory">Memory</div>
             <div data-filter="Hard Drives">Hard Drives</div>
           </div>
-          <!---->
-          <form>
-            <div class="container-fluid" id="products"></div>
-            <div class="container-fluid cart">
+          <div class="container-fluid" id="products"></div>
+          <div class="container-fluid cart">
+            <div class="container-fluid">
               <h2 class="summary-title">Shopping Card</h2>
-              <div class="container-fluid flex-column align-items-start" id ="cart-content"></div>
-              <div class="container-fluid">
-              
-                <div class="group method">
-                  <label for="pickup" class="group-label"
-                    >Shipping and Handling:</label
-                  ><br />
-                  <input
-                    type="radio"
-                    value="pickup"
-                    name="method"
-                    id="pickup"
-                    checked
-                  />
-                  <label for="pickup">Pickup (free)</label><br />
-                  <input
-                    type="radio"
-                    value="hermes"
-                    name="method"
-                    id="hermes"
-                  />
-                  <label for="hermes">Hermes ($3.99)</label><br />
-                  <input type="radio" value="dhl" name="method" id="dhl" />
-                  <label for="dhl">DHL ($4.79)</label>
-                </div>
-                <div class="group special">
-                  <label for="c-special" class="group-label">Special:</label
-                  ><br />
-
-                  <input
-                    type="checkbox"
-                    value="YES"
-                    name="special-email"
-                    id="special-email"
-                  />
-                  <label for="special-email">Sign up for our mailing list</label
-                  ><br />
-
-                  <input
-                    type="checkbox"
-                    value="YES"
-                    name="special-recipes"
-                    id="special-recipes"
-                  />
-                  <label for="special-recipes"
-                    >Include receipt in the parcel
-                  </label>
-                  <br />
-
-                  <input
-                    type="checkbox"
-                    value="YES"
-                    name="special-gift"
-                    id="special-gift"
-                  />
-                  <label for="special-gift">Wrap as a gift </label>
-                </div>
-                <div class="group notes">
-                  <label for="txt-notes" class="group-label">Other notes:</label
-                  ><br />
-
-                  <textarea
-                    name="txt-notes"
-                    id="txt-notes"
-                    rows="3
-                    placeholder="Any comments we need to know."
-                  ></textarea>
-                </div>
+            </div>
+            <div
+              class="container-fluid flex-column align-items-start justify-content-center w-75"
+              id="cart-content"
+            ></div>
+            <div class="container-fluid">
+              <div class="group method">
+                <label for="pickup" class="group-label"
+                  >Shipping and Handling:</label
+                ><br />
+                <input
+                  type="radio"
+                  value="pickup"
+                  name="method"
+                  id="pickup"
+                  checked
+                />
+                <label for="pickup">Pickup (free)</label><br />
+                <input type="radio" value="hermes" name="method" id="hermes" />
+                <label for="hermes">Hermes ($3.99)</label><br />
+                <input type="radio" value="dhl" name="method" id="dhl" />
+                <label for="dhl">DHL ($4.79)</label>
               </div>
-              <div class="container-fluid">
-                <div class="group calc">
-
-                    <button
-                      id="btn-estimate"
-                      class="btn btn-estimate"
-                    >Estimate Total</button>
-                </div>
+              <div class="group special">
+                <label class="group-label">Special:</label><br />
+                <input
+                  type="checkbox"
+                  value="YES"
+                  name="special-email"
+                  id="special-email"
+                />
+                <label for="special-email">Sign up for our mailing list</label
+                ><br />
+                <input
+                  type="checkbox"
+                  value="YES"
+                  name="special-recipes"
+                  id="special-recipes"
+                />
+                <label for="special-recipes"
+                  >Include receipt in the parcel
+                </label>
+                <br />
+                <input
+                  type="checkbox"
+                  value="YES"
+                  name="special-gift"
+                  id="special-gift"
+                />
+                <label for="special-gift">Wrap as a gift </label>
               </div>
-              <div class="container-fluid">
-               
-                <div class="group sum">
-                  <table>
-                      <tr>
-                        <td>Total items:</td>
-                        <td><input type="text" id="items-qnt" disabled placeholder="0"></input></td>
-                      </tr>
-                      <tr>
-                        <td>Shipping Costs:</td>
-                        <td><input type="text" id="shipping-sum" disabled placeholder="$0.00"></input></td>
-                      </tr>
-                      <tfoot>
-                        <tr>
-                          <td>Total sum:</td>
-                          <td><input type="text" id="total-sum" disabled placeholder="$0.00"></input></td>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
-                </div>
+              <div class="group notes">
+                <label for="txt-notes" class="group-label">Other notes:</label
+                ><br />
+                <textarea
+                  name="txt-notes"
+                  id="txt-notes"
+                  rows="3"
+                  placeholder="Any comments we need to know."
+                ></textarea>
               </div>
             </div>
+            <div class="container-fluid">
+              <div class="group calc">
+                <button id="btn-estimate" class="btn btn-estimate">
+                  Estimate Total
+                </button>
+              </div>
             </div>
-          </form>
+            <div class="container-fluid">
+              <div class="group sum">
+                <table>
+                  <tr>
+                    <td>Total items:</td>
+                    <td>
+                      <input
+                        type="text"
+                        id="items-qnt"
+                        disabled
+                        placeholder="0"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Shipping Costs:</td>
+                    <td>
+                      <input
+                        type="text"
+                        id="shipping-sum"
+                        disabled
+                        placeholder="$0.00"
+                      />
+                    </td>
+                  </tr>
+                  <tfoot>
+                    <tr>
+                      <td>Total sum:</td>
+                      <td>
+                        <input
+                          type="text"
+                          id="total-sum"
+                          disabled
+                          placeholder="$0.00"
+                        />
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <footer class="small text-center text-muted px-2 footer">

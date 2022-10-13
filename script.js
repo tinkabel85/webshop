@@ -15,11 +15,13 @@ const getProducts = async () => {
 
 // getting access to DOM element with id "products"
 const productsWrapper = document.getElementById("products");
-// getting access to button "Estimate Total"
-const button = document.getElementById("btn-estimate");
+
 // === Calculation of the order total sum ===
 /* in case of the button click, the program will calculate the total order sum as well as shipping costs, 
 total item in cart and total sum of all items */
+
+// getting access to button "Estimate Total"
+const button = document.getElementById("btn-estimate");
 button.addEventListener("click", (e) => {
   e.preventDefault();
   // calculation of shipping costs based on the selected shipping method
@@ -37,6 +39,10 @@ button.addEventListener("click", (e) => {
       break;
   }
 
+  // cart.map((obj) => {
+  //   obj.quantity = 2;
+  // });
+
   const itemsInCart = cart.reduce((sum, obj) => {
     return sum + obj.quantity;
   }, 0);
@@ -47,6 +53,7 @@ button.addEventListener("click", (e) => {
   document.getElementById("items-qnt").value = itemsInCart;
   document.getElementById("shipping-sum").value = "$" + shippingCost;
   document.getElementById("total-sum").value = "$" + totalSum;
+  console.log("Updated cart", cart);
 });
 // creating an empty array for shopping cart
 let cart = [];
@@ -58,25 +65,27 @@ function addToCart(id) {
   const productInCart = {
     name: productDom.querySelector(".item-name").innerText,
     price: parseInt(productDom.querySelector(".price").innerText.substring(1)),
+    totalItemPrice: parseInt(
+      productDom.querySelector(".price").innerText.substring(1)
+    ),
     quantity: 1,
   };
   productDom.querySelector(".cart-btn").disabled = true;
   productDom.querySelector(".cart-btn").innerText = "In Cart";
-  let totalItemPrice = productInCart.price * productInCart.quantity;
-  productInCart.totalItemPrice = totalItemPrice;
   cart.push(productInCart);
-  console.log("Cart", cart);
 
   cartDom.insertAdjacentHTML(
     "afterbegin",
     `
-    <div class="d-flex flex-row justify-content-around w-75 cart-items">
-        <p class="p-2 mb-1 w-50 cart-item-name flex-grow-1 ">${productInCart.name}</p>
-        <p class="p-2 mb-1 w-25 cart-item-price">$ ${productInCart.price}</p>
-    <button class="mb-1 p-2 cart-item-btn" type="button" data-action="remove-item"><i class='bx bx-x bx-sm bx-tada-hover'></i></button>
+    <div class="d-flex flex-row justify-content-around w-75 mx-auto cart-items">
+      <p class="p-2 mb-1 cart-item-name w-75 ">${productInCart.name}</p>
+      <p class="p-2 mb-1 flex-fill cart-item-price">$ ${productInCart.price}</p>
+      <input class="mb-1 mx-1 flex-fill quantityInput" type="number" min="1" max="10" id="quantity" size="3" placeholder="1">
+      <button class="mb-1 p-2  flex-fill cart-item-btn" type="button" data-action="remove-item"><i class='bx bx-x bx-sm bx-tada-hover'></i></button>
     </div>
   `
   );
+
   const cartItemsDom = cartDom.querySelectorAll(".cart-items");
   cartItemsDom.forEach((cartItemDom) => {
     if (
@@ -93,8 +102,15 @@ function addToCart(id) {
             );
             productDom.querySelector(".cart-btn").disabled = false;
             productDom.querySelector(".cart-btn").innerText = "Add to Cart";
-            console.log(cart);
           });
+        });
+      let quantityInput = cartItemDom
+        .querySelector(".quantityInput")
+        .addEventListener("change", (event) => {
+          let input = event.target.value;
+          productInCart.quantity = parseInt(input);
+          let totalItemPrice = productInCart.price * productInCart.quantity;
+          productInCart.totalItemPrice = totalItemPrice;
         });
     }
   });
@@ -110,7 +126,6 @@ window.addEventListener("DOMContentLoaded", async function () {
 
 /* arror function that received the array of items passed as a parameter, 
  creates the new array with the nested div element containing the item data for each item. */
-
 const displayProductItems = (items) => {
   let displayProduct = items.map(
     (product) => `

@@ -154,7 +154,6 @@ body {
   height: 3rem;
   transition: 0.3s;
 }
-
 .item .bottom .cart-btn {
   border-radius: 1rem;
   padding: 0.8rem 1rem;
@@ -164,11 +163,7 @@ body {
 .item .bottom .price {
   font-size: 1.4rem;
 }
-.item .bottom .quantity {
-  width: 3rem;
-}
 .item:hover {
-  /* transform: scale(1.08); */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .item:hover .top .icon {
@@ -180,7 +175,6 @@ body {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-
 .collection .button .btn {
   display: inline-block;
   padding: 0.3rem 1rem;
@@ -227,7 +221,6 @@ textarea {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-
 .footer {
   display: flex;
   justify-content: space-between;
